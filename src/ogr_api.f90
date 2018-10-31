@@ -8,7 +8,7 @@
 
 module ogr_api
 use, intrinsic:: iso_c_binding, only: c_ptr, c_null_ptr, c_int
-use:: c_conv_type, only: CString
+use:: c_type_ext, only: CString
 use:: ogr_core, only: OGRErr
 use:: ogr_srs_api, only: OGRSpatialReferenceH
 implicit none

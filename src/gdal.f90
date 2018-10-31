@@ -8,7 +8,7 @@
 
 module gdal
 use, intrinsic:: iso_c_binding, only: c_ptr, c_null_ptr, c_char, c_int
-use:: c_conv_type
+use:: c_type_ext
 use:: cpl_conv
 use:: cpl_port
 use:: cpl_string

@@ -7,7 +7,7 @@
 
 
 module cpl_conv
-use::c_conv_type, only: CString
+use::c_type_ext, only: CString
 implicit none
 
     interface

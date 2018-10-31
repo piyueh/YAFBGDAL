@@ -1,12 +1,12 @@
 !
-! c_conv_type.f90
+! c_type_ext.f90
 ! Copyright (C) 2018 Pi-Yueh Chuang <pychuang@gwu.edu>
 !
 ! Distributed under terms of the MIT license.
 !
 
 
-module c_conv_type
+module c_type_ext
 use, intrinsic:: iso_c_binding, only: c_ptr, c_null_ptr, c_size_t, c_char, c_f_pointer
 implicit none
 
@@ -45,5 +45,5 @@ contains
         enddo 
     end function cstr2fstr
 
-end module c_conv_type
+end module c_type_ext
 ! vi: ft=fortran

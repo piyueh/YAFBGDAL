@@ -10,7 +10,7 @@ SET(SRC ${PROJECT_SOURCE_DIR}/src)
 
 # source files
 SET(SOURCE
-    ${SRC}/c_conv_type.f90
+    ${SRC}/c_type_ext.f90
     ${SRC}/cpl_conv.f90
     ${SRC}/cpl_port.f90
     ${SRC}/cpl_string.f90
