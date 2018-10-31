@@ -49,6 +49,25 @@ private:: c_ptr, c_null_ptr, c_int, CString, OGRErr, OGRSpatialReferenceH
             type(CString):: OGR_G_GetGeometryName
         end function OGR_G_GetGeometryName
 
+        module subroutine OGR_G_FlattenTo2D(hGeom) bind(C, name="OGR_G_FlattenTo2D")
+            type(OGRGeometryH), intent(in), value:: hGeom
+        end subroutine OGR_G_FlattenTo2D
+
+        module function OGR_G_CoordinateDimension(hGeom) bind(C, name="OGR_G_CoordinateDimension")
+            type(OGRGeometryH), intent(in), value:: hGeom
+            integer(kind=c_int):: OGR_G_CoordinateDimension
+        end function OGR_G_CoordinateDimension
+
+        module function OGR_G_GetDimension(hGeom) bind(C, name="OGR_G_GetDimension")
+            type(OGRGeometryH), intent(in), value:: hGeom
+            integer(kind=c_int):: OGR_G_GetDimension
+        end function OGR_G_GetDimension
+
+        module function OGR_G_GetPointCount(hGeom) bind(C, name="OGR_G_GetPointCount")
+            type(OGRGeometryH), intent(in), value:: hGeom
+            integer(kind=c_int):: OGR_G_GetPointCount
+        end function OGR_G_GetPointCount
+
         module function OGR_Fld_GetNameRef(hDefn) bind(C, name="OGR_Fld_GetNameRef")
             type(OGRFieldDefnH), intent(in), value:: hDefn
             type(CString):: OGR_Fld_GetNameRef

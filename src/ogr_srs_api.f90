@@ -27,6 +27,13 @@ private:: c_ptr, c_null_ptr, c_int, CString, OGRErr
             integer(kind=c_int), intent(in), value:: bSimplify
             type(OGRErr):: OSRExportToPrettyWkt
         end function OSRExportToPrettyWkt
+
+        module function OSRExportToWkt( &
+            hSRS, ppszReturn) bind(C, name="OSRExportToWkt")
+            type(OGRSpatialReferenceH), intent(in), value:: hSRS
+            type(CString), intent(inout):: ppszReturn
+            type(OGRErr):: OSRExportToWkt
+        end function OSRExportToWkt
     end interface
 
 end module ogr_srs_api

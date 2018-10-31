@@ -19,6 +19,19 @@ implicit none
 
 public
 
+    integer(kind=c_int), parameter:: GDAL_OF_ALL = z"00"
+    integer(kind=c_int), parameter:: GDAL_OF_ARRAY_BLOCK_ACCESS = z"100" 
+    integer(kind=c_int), parameter:: GDAL_OF_DEFAULT_BLOCK_ACCESS = 0
+    integer(kind=c_int), parameter:: GDAL_OF_GNM = z"08"
+    integer(kind=c_int), parameter:: GDAL_OF_HASHSET_BLOCK_ACCESS = z"200"
+    integer(kind=c_int), parameter:: GDAL_OF_INTERNAL = z"80"
+    integer(kind=c_int), parameter:: GDAL_OF_RASTER = z"02"
+    integer(kind=c_int), parameter:: GDAL_OF_READONLY = z"00"
+    integer(kind=c_int), parameter:: GDAL_OF_SHARED = z"20"
+    integer(kind=c_int), parameter:: GDAL_OF_UPDATE = z"01"
+    integer(kind=c_int), parameter:: GDAL_OF_VECTOR = z"04"
+    integer(kind=c_int), parameter:: GDAL_OF_VERBOSE_ERROR = z"40"
+
     type, bind(C):: GDALDatasetH
         type(c_ptr):: ptr = c_null_ptr
     end type GDALDatasetH
